@@ -183,8 +183,7 @@ class BaseGen:
 
         # starts generation.
         while (
-            time.time() - init_time < max_gen_millisec / 1000
-            and self.num_op() < max_node_size
+            self.num_op() < max_node_size
         ):
             if self.extra_exit_check(max_node_size):
                 break
